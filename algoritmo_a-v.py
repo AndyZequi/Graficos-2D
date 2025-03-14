@@ -102,15 +102,14 @@ def dibujar_grid():
             pygame.draw.rect(pantalla, color, (col * TAMANO_CELDA, fila * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA))
             pygame.draw.rect(pantalla, NEGRO, (col * TAMANO_CELDA, fila * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA), 1)
 
-    # Dibujar inicio y meta
-    pygame.draw.rect(pantalla, ROJO, (inicio[1] * TAMANO_CELDA, inicio[0] * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA))
-    pygame.draw.rect(pantalla, VERDE, (meta[1] * TAMANO_CELDA, meta[0] * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA))
-
     # Dibujar el camino en amarillo
     if camino:
         for (x, y) in camino:
             pygame.draw.rect(pantalla, AMARILLO, (y * TAMANO_CELDA, x * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA))
 
+    # Dibujar inicio y meta
+    pygame.draw.rect(pantalla, ROJO, (inicio[1] * TAMANO_CELDA, inicio[0] * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA))
+    pygame.draw.rect(pantalla, VERDE, (meta[1] * TAMANO_CELDA, meta[0] * TAMANO_CELDA, TAMANO_CELDA, TAMANO_CELDA))
 
 # Bucle principal de Pygame
 ejecutando = True
